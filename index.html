@@ -9,12 +9,16 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     background: #fff;
     color: #000;
     min-height: 100vh;
     line-height: 1.6;
     font-weight: 400;
+  }
+
+  .serif {
+    font-family: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
   }
 
   #cover {
@@ -184,8 +188,8 @@
 <body>
 
 <div id="cover" onclick="handleCover()">
-  <h1>Some words paint a<br>thousand pictures.</h1>
-  <div class="reveal" id="coverReveal">You just have to choose the right ones.</div>
+  <h1 class="serif">Some words paint a<br>thousand pictures.</h1>
+  <div class="reveal serif" id="coverReveal">You just have to choose the right ones.</div>
 </div>
 
 <div id="main">
