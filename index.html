@@ -45,9 +45,10 @@
     color: #000;
     text-align: center;
     opacity: 0;
-    transition: opacity 0.6s;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
   }
-  #cover .reveal.visible { opacity: 1; }
+  #cover .reveal.visible { opacity: 1; transform: translateY(0); }
 
   #main {
     min-height: 100vh;
@@ -284,12 +285,15 @@
 </div>
 
 <script>
-let step = 0;
 function handleCover() {
-  step++;
-  if (step === 1) document.getElementById('coverReveal').classList.add('visible');
-  else if (step >= 2) document.getElementById('cover').classList.add('hidden');
+  document.getElementById('cover').classList.add('hidden');
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.getElementById('coverReveal').classList.add('visible');
+  }, 3000);
+});
 
 function openModal(id) {
   document.getElementById(id).classList.add('active');
